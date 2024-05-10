@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import pocsuite3
 # 包含RLO控制字符的文件名
 file_name = "malicious\u202e.exe"
 

@@ -1,6 +1,10 @@
 import socket
+import getopt
 
 
+def usage():    
+    print("Useage: scanport -a target_address")
+    print("""-p    - if If specified,scan only one to target port """)
 def scans(address:str,port:str) -> None:
     """
         只扫描指定端口，如果命令行参数提供了
@@ -36,14 +40,32 @@ def scan(address:str) -> None:
     skt.close()
 if __name__ == "__main__":
     import sys
-    l = len(sys.argv)-1    
-    
-    if l == 0:
-        print("Useage: scanport <address> [port]")
-    elif l == 1 :
-        scan(sys.argv[1])
-    else:
-        scans(sys.argv[1],sys.argv[2])
-    
+    args=sys.argv[1:]   
+    shrot="ha:p:"
+    address=''
+    port=''
+    if len(args) == 0:
+        usage()
+        sys.exit(0)    
+    try:
+        opts,arg=getopt.getopt(args,shortopts=shrot)
+    except getopt.GetoptError:
+        usage()
+        sys.exit(2)
+    for opt,arg in opts:
+        if "-a" in opt:
+            address=arg
+        elif "-p" in opt:
+            port = arg
+        elif "-h" in opt:
+            usage()
+            sys.exit(0)
+    if address == "":
+        print("must spicifed target address")
+        sys.exit(2)
+    elif port == '':
+        scan(address)
+    else: 
+        scans(address,port)
     
     

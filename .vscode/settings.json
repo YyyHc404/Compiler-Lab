@@ -6,5 +6,9 @@
         "winsock.h": "c",
         "iphlpapi.h": "c",
         "winapifamily.h": "c"
-    }
+    },
+    "python.analysis.extraPaths": [
+        "C:/Users/admin/AppData/Roaming/Python/Python311/site-packages/**"
+    ],
+    "python.autoComplete.extraPaths": ["C:/Users/admin/AppData/Roaming/Python/Python311/site-packages/**"]
 }
