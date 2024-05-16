@@ -5,7 +5,10 @@
         "*.wxs": "javascript",
         "winsock.h": "c",
         "iphlpapi.h": "c",
-        "winapifamily.h": "c"
+        "winapifamily.h": "c",
+        "queue": "c",
+        "stack": "c",
+        "io.h": "c"
     },
     "python.analysis.extraPaths": [
         "C:/Users/admin/AppData/Roaming/Python/Python311/site-packages/**"
