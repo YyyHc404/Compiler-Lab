@@ -9,6 +9,9 @@
 
 - (type * n)()语法可以创建一个包含n个type类型对象的数组
 ----
+format 将字符串转为二进制
+ord 将字符转为ascll码
+----
 ## python 隔离环境 venv
 python3 自带该模块
 python -m venv ENV_DIR  

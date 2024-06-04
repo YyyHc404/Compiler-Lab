@@ -8,7 +8,8 @@
         "winapifamily.h": "c",
         "queue": "c",
         "stack": "c",
-        "io.h": "c"
+        "io.h": "c",
+        "stdlib.h": "c"
     },
     "python.analysis.extraPaths": [
         "C:/Users/admin/AppData/Roaming/Python/Python311/site-packages/**"
